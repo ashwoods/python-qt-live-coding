@@ -27,7 +27,7 @@ class ProjectBrowser(QObject):
         return self._project_path
 
     @projectPath.setter
-    def projectPath(self, value):
+    def _set_projectPath(self, value):
         if self._project_path == value:
             return
         self._project_path = value
@@ -42,7 +42,7 @@ class ProjectBrowser(QObject):
         return self._extensions
 
     @extensions.setter
-    def extensions(self, value):
+    def _set_extensions(self, value):
         if self._extensions == value:
             return
         self._extensions = value

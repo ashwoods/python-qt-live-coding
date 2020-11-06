@@ -45,7 +45,7 @@ class FileWatcher(QObject):
         return self._file_url
 
     @fileUrl.setter
-    def fileUrl(self, value):
+    def _set_fileUrl(self, value):
         if self._file_url == value:
             return
         self._file_url = value
@@ -56,7 +56,7 @@ class FileWatcher(QObject):
         return self._enabled
 
     @enabled.setter
-    def enabled(self, value):
+    def _set_enabled(self, value):
         if self._enabled == value:
             return
         self._enabled = value
@@ -67,7 +67,7 @@ class FileWatcher(QObject):
         return self._recursive
 
     @recursive.setter
-    def recursive(self, value):
+    def _set_recursive(self, value):
         if self._recursive == value:
             return
         self._recursive = value
@@ -78,7 +78,7 @@ class FileWatcher(QObject):
         return self._name_filters
 
     @nameFilters.setter
-    def nameFilters(self, value):
+    def _set_nameFilters(self, value):
         if (
             self._name_filters == value
         ):  # note: we compare the reference here, not the actual list
