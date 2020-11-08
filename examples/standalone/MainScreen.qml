@@ -33,7 +33,7 @@ Item {
 
       TextInput {
         id: in2Input
-        text: "4"
+        text: "1"
       }
 
       Text {

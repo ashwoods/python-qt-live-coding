@@ -23,7 +23,7 @@ class Calculator(QObject):
         return self._in1
 
     @in1.setter
-    def in1(self, value):
+    def _set_in1(self, value):
         if value == self._in1:
             return
         self._in1 = value
@@ -34,7 +34,7 @@ class Calculator(QObject):
         return self._in2
 
     @in2.setter
-    def in2(self, value):
+    def _set_in2(self, value):
         if value == self._in2:
             return
         self._in2 = value

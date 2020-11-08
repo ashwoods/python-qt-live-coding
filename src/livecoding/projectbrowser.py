@@ -33,11 +33,11 @@ class ProjectBrowser(QObject):
         self._project_path = value
         self.projectPathChanged.emit(value)
 
-    @Property('QStringList', notify=qmlFilesChanged)
+    @Property(list, notify=qmlFilesChanged)
     def qmlFiles(self):
         return self._qml_files
 
-    @Property('QStringList', notify=extensionsChanged)
+    @Property(list, notify=extensionsChanged)
     def extensions(self):
         return self._extensions
 

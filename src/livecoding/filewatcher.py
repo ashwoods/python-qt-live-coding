@@ -73,7 +73,7 @@ class FileWatcher(QObject):
         self._recursive = value
         self.recursiveChanged.emit(value)
 
-    @Property('QStringList', notify=nameFiltersChanged)
+    @Property(list, notify=nameFiltersChanged)
     def nameFilters(self):
         return self._name_filters
 
